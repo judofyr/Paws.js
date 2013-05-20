@@ -7,9 +7,11 @@ Script = require './Script.coffee'
 
 parameterizable class Thing
    constructor: ->
-      @id = uuid.v4() 
+      it = construct this
       
-      return this
+      it.id = uuid.v4()
+      
+      return it
 
 module.exports = Paws =
    Thing: Thing
