@@ -29,7 +29,7 @@ module.exports = Paws =
       
       compare: (to) -> to == this
       
-      at: (idx) -> @metadata[idx].to
+      at: (idx) -> @metadata[idx]?.to
       push: (elements...) ->
          @metadata = @metadata.concat Relation.from elements
       
